@@ -7,10 +7,10 @@ async function entry() {
   // Add as much `bundleConfigPack` as you want here
 
   await bundleConfigPack({
-    frameDir: resolve(import.meta.dirname, 'roo-rocket-troops/main/frame'),
-    fuelDir: resolve(import.meta.dirname, 'roo-rocket-troops/@fuel-garage'),
+    frameDir: resolve(import.meta.dirname, 'assembly/roo-rocket-troops/boomerang/frame'),
+    fuelDir: resolve(import.meta.dirname, 'assembly/roo-rocket-troops/@fuel-garage'),
     outDir,
-    outName: 'main',
+    outName: 'roo-boomerang',
   })
 }
 await entry()
