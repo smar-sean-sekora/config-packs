@@ -15,8 +15,8 @@ importers:
         specifier: ^2.5.1
         version: 2.5.1
       config-rocket:
-        specifier: ^0.2.2
-        version: 0.2.2(magicast@0.3.5)
+        specifier: ^0.3.1
+        version: 0.3.1(magicast@0.3.5)
       consola:
         specifier: ^3.4.2
         version: 3.4.2
@@ -43,8 +43,8 @@ importers:
         specifier: ^9.24.0
         version: 9.24.0(jiti@2.4.2)
       kontroll:
-        specifier: ^1.0.4
-        version: 1.0.4
+        specifier: ^1.0.5
+        version: 1.0.5
       lint-staged:
         specifier: ^15.5.1
         version: 15.5.1
@@ -991,8 +991,8 @@ packages:
   confbox@0.2.2:
     resolution: {integrity: sha512-1NB+BKqhtNipMsov4xI/NnhCKp9XG9NamYp5PVm9klAT0fsrNPjaFICsCFhNhwZJKNh7zB/3q8qXz0E9oaMNtQ==}
 
-  config-rocket@0.2.2:
-    resolution: {integrity: sha512-lKnqcDTlJavDCGE7P5FhKlehGKHtm9dFI44tMi8Av2JJJOBHlM4d+qpgln6IOsZZ3Mev+Ut+WV286nIytKXxFA==}
+  config-rocket@0.3.1:
+    resolution: {integrity: sha512-ni3weT3z4nNx3ZtLX0YaBSYho/NArRQL18cWEQtmbywCAz8vvU1qj8l2L62bmUenRKBOiV9F/qeWSXEm6w+Czw==}
     engines: {node: '>=20.13.1'}
     hasBin: true
 
@@ -1516,8 +1516,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  kontroll@1.0.4:
-    resolution: {integrity: sha512-4gQVY2uKcBvagaTlUiPW64rWB5RTqcUTQQq9ew0iSB/hyL/spFAXvbskMzBB4Q+KltQFW7Vbxxup+0ktiLuLbg==}
+  kontroll@1.0.5:
+    resolution: {integrity: sha512-Fc9SZ3JGGkSrOo8rIGoZMjhfaaXY0DvJaewSdKve2KuT98icylO2J130Zsb/7Hzm9BnQ+88avT0ka51A4qBGuQ==}
     engines: {node: '>=18.0.0'}
 
   levn@0.4.1:
@@ -3101,12 +3101,13 @@ snapshots:
 
   confbox@0.2.2: {}
 
-  config-rocket@0.2.2(magicast@0.3.5):
+  config-rocket@0.3.1(magicast@0.3.5):
     dependencies:
       c12: 3.0.3(magicast@0.3.5)
       citty: 0.1.6
       confbox: 0.2.2
       consola: 3.4.2
+      defu: 6.1.4
       fflate: 0.8.2
       hookable: 5.5.3
       pathe: 2.0.3
@@ -3686,7 +3687,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  kontroll@1.0.4: {}
+  kontroll@1.0.5: {}
 
   levn@0.4.1:
     dependencies:
