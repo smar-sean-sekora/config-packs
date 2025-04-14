@@ -3,14 +3,16 @@ import { startDevelopmentCycle } from '~/helpers/dev'
 
 async function entry() {
   // Change your target dev subject here:
-  const targetDevSubject = resolve(import.meta.dirname, 'assembly/roo-rocket-troops/boomerang')
+  const targetDevSubject = resolve(import.meta.dirname, 'assembly/roo-rocket-troops/brave-search-mcp')
   const fuelDir = resolve(import.meta.dirname, 'assembly/roo-rocket-troops/@fuel-garage')
   const devDir = resolve(import.meta.dirname, '../.config-dev')
+  const cleanOnReassemble = true
 
   await startDevelopmentCycle({
     targetDevSubject,
     fuelDir,
     devDir,
+    cleanOnReassemble,
   })
 }
 await entry()

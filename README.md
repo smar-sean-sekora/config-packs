@@ -17,6 +17,9 @@
 + [`roo-boomerang`](./src/assembly/roo-rocket-troops/boomerang/)
   + An example of a `roo-rocket` config pack, contains a simple `boomerang` custom mode with optimized memory bank collaboration instructions.
 
++ [`roo-brave-search-mcp`](./src/assembly/roo-rocket-troops/brave-search-mcp/)
+  + Another `roo-rocket` config pack, utilizing `filesBuildResolver` for purpose of demostration, contains a simple interactive setup to install Brave Search MCP.
+
 ## Crafting guide: [>CLICK<](./CRAFTING_GUIDE.md)
 
 ## License [![License][license-src]][license-href]

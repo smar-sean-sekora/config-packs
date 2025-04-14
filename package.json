@@ -19,7 +19,7 @@
   "scripts": {
     "start": "tsx",
     "watch": "tsx watch",
-    "dev": "pnpm run start src/dev.ts",
+    "dev": "pnpm run watch src/dev.ts",
     "bundle": "pnpm run start src/bundle.ts",
     "lint": "eslint .",
     "test:types": "tsc --noEmit",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@parcel/watcher": "^2.5.1",
-    "config-rocket": "^0.3.1",
+    "config-rocket": "^0.3.5",
     "consola": "^3.4.2",
     "pathe": "^2.0.3",
     "std-env": "^3.9.0",

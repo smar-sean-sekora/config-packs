@@ -1,32 +1,9 @@
-import { mkdir, rm } from 'node:fs/promises'
 import { subscribe } from '@parcel/watcher'
 import { rocketAssemble } from 'config-rocket'
 import { debounce, throttle } from 'kontroll'
 import { join } from 'pathe'
 import { logger } from '~/helpers/logger'
-
-export interface PrepareDevDirOptions {
-  /**
-   * The path in which the dev directory will be created.
-   */
-  path: string
-
-  /**
-   * Whether to clean old available files before spitting out the new ones.
-   */
-  clean?: boolean
-}
-export async function prepareDevDir(options: PrepareDevDirOptions) {
-  const {
-    path,
-    clean,
-  } = options
-
-  if (clean)
-    await rm(path, { recursive: true, force: true })
-
-  await mkdir(path, { recursive: true })
-}
+import { prepareDirectory } from './fs'
 
 export interface StartDevelopmentCycleOptions {
   /**
@@ -43,17 +20,23 @@ export interface StartDevelopmentCycleOptions {
    * Path to the dev directory
    */
   devDir: string
+
+  /**
+   * Whether to clean the dev directory upon `assemble` triggers
+   */
+  cleanOnReassemble?: boolean
 }
 export async function startDevelopmentCycle(options: StartDevelopmentCycleOptions) {
   const {
     targetDevSubject,
     fuelDir,
     devDir,
+    cleanOnReassemble,
   } = options
 
   // Prepare dev dir
   logger.start('Dev started, preparing dev dir...')
-  await prepareDevDir({
+  await prepareDirectory({
     path: devDir,
     clean: true,
   })
@@ -75,10 +58,10 @@ export async function startDevelopmentCycle(options: StartDevelopmentCycleOption
       }).then(resolve)
     }).catch((e) => {
       if (e === 'cancelled')
-        return logger.debug('Assemble cancelled')
+        return logger.debug('Assemble cancelled.')
 
       throw e
-    })
+    }).then(() => { logger.success('Assemble done successfully.') })
   }
 
   // Subcribe for troop folder changes and re-assemble
@@ -88,17 +71,26 @@ export async function startDevelopmentCycle(options: StartDevelopmentCycleOption
 
     throttle(1000, () => logger.info('FS changes received, re-triggering "assemble"...'))
     cancelCurrentPromise()
-    debounce(1000, assemble, { key: 'assemble' })
+    debounce(
+      1000,
+      async () => {
+        if (cleanOnReassemble) {
+          await prepareDirectory({
+            path: devDir,
+            clean: true,
+          })
+        }
+        await assemble()
+      },
+      { key: 'assemble' },
+    )
   })
 
   // Initial assemble, using `debounce` wrapper here ensure that only one `assemble` event is running at a time, avoiding possible bugs.
   logger.start('Initial assemble...')
   debounce(
     1000,
-    async () => {
-      await assemble()
-      logger.success('Initial assemble success.')
-    },
+    assemble,
     { key: 'assemble', leading: true },
   )
 }

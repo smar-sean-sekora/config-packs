@@ -8,6 +8,10 @@ To be able to bundle and assemble, `Config Rocket` requires a `rocket assembly`,
   * `rocket.config.ts`: the rocket config file, containing the instructions to for `RR` to assemble and allowing customization of the rocket.
     * Utilizes `TypeScript` on development side for type safety & autocomplete DX, bundles to `JSON5` for safety and human-readability at client-side.
 
+#### `rocket.config.ts` available configurations:
+
+Please refer to [**Typedoc page**](https://namesmt.github.io/config-rocket/interfaces/RocketConfig.html)
+
 ### Ecosystem and customizability note:
 
 If you're crafting a config pack for an extension of `config-rocket`, remember to check their rules and guidelines, e.g:
