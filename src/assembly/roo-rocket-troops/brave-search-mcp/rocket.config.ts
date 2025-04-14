@@ -7,7 +7,6 @@ export default defineRocketConfig({
       operation: 'prompt',
       label: 'Please enter your Brave API key:',
       type: 'text',
-      required: true,
     },
   }],
 
