@@ -3,8 +3,8 @@ import { startDevelopmentCycle } from '~/helpers/dev'
 
 async function entry() {
   // Change your target dev subject here:
-  const targetDevSubject = resolve(import.meta.dirname, 'assembly/roo-rocket-troops/brave-search-mcp')
-  const fuelDir = resolve(import.meta.dirname, 'assembly/roo-rocket-troops/@fuel-garage')
+  const targetDevSubject = resolve(import.meta.dirname, 'assembly/roo-rocket/brave-search-mcp')
+  const fuelDir = resolve(import.meta.dirname, 'assembly/@fuel-garage')
   const devDir = resolve(import.meta.dirname, '../.config-dev')
   const cleanOnReassemble = true
 

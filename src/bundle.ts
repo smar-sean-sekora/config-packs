@@ -14,15 +14,15 @@ async function entry() {
   // Add as much `bundleConfigPack` as you want here
 
   await bundleConfigPack({
-    frameDir: resolve(import.meta.dirname, 'assembly/roo-rocket-troops/boomerang/frame'),
-    fuelDir: resolve(import.meta.dirname, 'assembly/roo-rocket-troops/@fuel-garage'),
+    frameDir: resolve(import.meta.dirname, 'assembly/roo-rocket/boomerang/frame'),
+    fuelDir: resolve(import.meta.dirname, 'assembly/@fuel-garage'),
     outDir,
     outName: 'roo-boomerang',
   })
 
   await bundleConfigPack({
-    frameDir: resolve(import.meta.dirname, 'assembly/roo-rocket-troops/brave-search-mcp/frame'),
-    fuelDir: resolve(import.meta.dirname, 'assembly/roo-rocket-troops/@fuel-garage'),
+    frameDir: resolve(import.meta.dirname, 'assembly/roo-rocket/brave-search-mcp/frame'),
+    fuelDir: resolve(import.meta.dirname, 'assembly/@fuel-garage'),
     outDir,
     outName: 'roo-brave-search-mcp',
   })
