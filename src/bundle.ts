@@ -26,5 +26,12 @@ async function entry() {
     outDir,
     outName: 'roo-brave-search-mcp',
   })
+
+  await bundleConfigPack({
+    rocketConfig: resolve(import.meta.dirname, 'assembly/roo-rocket/shariqriazz-vertex-mcp/rocket.config.ts'),
+    fuelDir: resolve(import.meta.dirname, 'assembly/@fuel-garage'),
+    outDir,
+    outName: 'roo-shariqriazz-vertex-mcp',
+  })
 }
 await entry()

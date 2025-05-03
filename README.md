@@ -21,6 +21,9 @@
 + [`roo-brave-search-mcp`](./src/assembly/roo-rocket/brave-search-mcp/)
   + Another `roo-rocket` config pack, utilizing `filesBuildResolver` for purpose of demostration, contains a simple interactive setup to install Brave Search MCP.
 
++ [`roo-shariqriazz-vertex-mcp`](./src/assembly/roo-rocket/shariqriazz-vertex-mcp/)
+  + Contains a somewhat advanced interactive setup to install Shariqriazz Vertex AI MCP.
+
 ## Crafting guide: [>CLICK<](./CRAFTING_GUIDE.md)
 
 ## License [![License][license-src]][license-href]
