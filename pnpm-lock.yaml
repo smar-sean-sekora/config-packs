@@ -24,8 +24,8 @@ importers:
         specifier: ^22.15.3
         version: 22.15.3
       config-rocket:
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.5.1
+        version: 0.5.1
       consola:
         specifier: ^3.4.2
         version: 3.4.2
@@ -1013,8 +1013,8 @@ packages:
   confbox@0.2.2:
     resolution: {integrity: sha512-1NB+BKqhtNipMsov4xI/NnhCKp9XG9NamYp5PVm9klAT0fsrNPjaFICsCFhNhwZJKNh7zB/3q8qXz0E9oaMNtQ==}
 
-  config-rocket@0.5.0:
-    resolution: {integrity: sha512-hkvDZUeqY0BuCedZzKFKhh1EJNJuE6scH2S9sSJvuA6si9EQPv4diQgjBCOpT2efyQql0QARtXnww436a/uXdg==}
+  config-rocket@0.5.1:
+    resolution: {integrity: sha512-+PChCNRDdKNentBZEv5onK+t+rCkRAeOGqQNskNy6Ay0pTomLuHvP8eIEakI3DQpTG1grPpsu004wIjZQal4qQ==}
     engines: {node: '>=20.13.1'}
     hasBin: true
 
@@ -3430,7 +3430,7 @@ snapshots:
 
   confbox@0.2.2: {}
 
-  config-rocket@0.5.0:
+  config-rocket@0.5.1:
     dependencies:
       citty: 0.1.6
       consola: 3.4.2
