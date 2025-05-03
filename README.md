@@ -1,9 +1,10 @@
 <div align="center">
 
-# Config Packs
+<h1>Config Packs</h1>
 
 <h3>My <code>config-rocket</code> ecosystem config packs!</h3>
 <img src="./branding.svg" alt="Project's branding image" width="320"/>
+
 </div>
 
 # config-packs [![template icon][template-src]][template-href]
