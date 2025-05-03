@@ -21,7 +21,7 @@ async function entry() {
   })
 
   await bundleConfigPack({
-    frameDir: resolve(import.meta.dirname, 'assembly/roo-rocket/brave-search-mcp/frame'),
+    rocketConfig: resolve(import.meta.dirname, 'assembly/roo-rocket/brave-search-mcp/rocket.config.ts'),
     fuelDir: resolve(import.meta.dirname, 'assembly/@fuel-garage'),
     outDir,
     outName: 'roo-brave-search-mcp',
