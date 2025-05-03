@@ -19,7 +19,7 @@
   "scripts": {
     "start": "tsx",
     "watch": "tsx watch",
-    "dev": "pnpm run watch src/dev.ts",
+    "dev": "pnpm run start --watch src/dev.ts",
     "bundle": "pnpm run start src/bundle.ts",
     "lint": "eslint .",
     "test:types": "tsc --noEmit",
