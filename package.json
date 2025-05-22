@@ -1,17 +1,17 @@
 {
   "name": "config-packs",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "packageManager": "pnpm@10.10.0",
   "description": "",
-  "author": "NamesMT <dangquoctrung123@gmail.com>",
+  "author": "Smartsheet",
   "license": "MIT",
-  "homepage": "https://github.com/namesmt/config-packs#readme",
+  "homepage": "https://github.com/smar-sean-sekora/config-packs#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namesmt/config-packs.git"
+    "url": "git+https://github.com/smar-sean-sekora/config-packs.git"
   },
-  "bugs": "https://github.com/namesmt/config-packs/issues",
+  "bugs": "https://github.com/smar-sean-sekora/config-packs/issues",
   "keywords": [],
   "engines": {
     "node": ">=20.13.1"
@@ -23,7 +23,7 @@
     "bundle": "pnpm run start src/bundle.ts",
     "lint": "eslint .",
     "test:types": "tsc --noEmit",
-    "release": "pnpm dlx changelogen@latest --release --push --publish",
+    "release": "pnpm dlx changelogen@latest --release --push",
     "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm run build"
   },
