@@ -4,10 +4,11 @@
       "command": "npx",
       "args": [
         "-y",
-        "@modelcontextprotocol/server-brave-search"
+        "@sekora/smar-mcp"
       ],
       "env": {
-        "BRAVE_API_KEY": "{{BRAVE_API_KEY}}"
+        "SMARTSHEET_API_KEY": "{{SMARTSHEET_API_KEY}}",
+        "SMARTSHEET_ENDPOINT": "{{SMARTSHEET_ENDPOINT}}"
       }
     }
   }
