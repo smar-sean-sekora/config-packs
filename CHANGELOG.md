@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.1
+
+[compare changes](https://github.com/smar-sean-sekora/config-packs/compare/v0.2.0...v0.1.1)
+
+### 💅 Refactors
+
+- Replace Boomerang, Brave Search and Vertex MCP with Smartsheet MCP implementation ([e4c2bee](https://github.com/smar-sean-sekora/config-packs/commit/e4c2bee))
+
+### ❤️ Contributors
+
+- Sean Sekora <sean.sekora@smartsheet.com>
+
 ## v0.2.0
 
 
